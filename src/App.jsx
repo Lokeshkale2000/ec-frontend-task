@@ -23,7 +23,7 @@ const App = () => {
     <div className="App">
       <Router basename="/ec-frontend-task">
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/ec-frontend-task" element={<Login />} />
           <Route path="/register" element={<Register />} />
           {isAuthenticated ? (
             <>

@@ -53,7 +53,7 @@ const ProductList = () => {
     const timer = setTimeout(() => {
       fetchProducts();
       fetchUser();
-    }, 6000);
+    }, 2000);
 
    
     return () => clearTimeout(timer);

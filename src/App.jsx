@@ -21,14 +21,14 @@ const App = () => {
 
   return (
     <div className="App">
-      <Router basename="/ec-frontend-task">
+      <Router basename="">
         <Routes>
-          <Route path="/ec-frontend-task" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route  exact path="register" element={<Register />} />
           {isAuthenticated ? (
             <>
-              <Route path="/products" element={<ProductList />} />
-              <Route path="/" element={<Navigate to="/products" replace />} />
+              <Route path="products" element={<ProductList />} />
+              <Route path="/" element={<Navigate to="products" replace />} />
             </>
           ) : (
             <Route path="*" element={<Navigate to="/login" replace />} />
